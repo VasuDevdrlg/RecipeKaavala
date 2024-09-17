@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Kavala</title>
+    <link rel="stylesheet" href="reciepe.css">
+    <link rel="icon" href="static/reshot-icon-hot-food-DUYKGBF2XM.svg" type="image/x-icon">
+</head>
+<style>
+    body{
+    background-image: url('static/recc.jpg');
+    background-size: cover;
+  
+}
+.container{
+    height: 250px;
+    border-radius: 15px;
+   margin-top: 180px;
+   width: 700px;
+   margin-left: 280px;
+   padding-top: 25px;
+   
+   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+   background-color: rgba(255, 255, 255, 0.8); 
+  
+}
+.main-h1{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align:  center;
+}
+.main-h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.search-bar{
+    height: 25px;
+    font-size: 15px;
+    width: 450px;
+    margin-left: 12.5%;
+    padding-left: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 30px;
+    border-color: grey;
+    border: 1px solid orange;
+    
+}
+.find{
+    height: 40px;
+    width: 65px;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 30px;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border: 1px solid orange;
+}
+.find::after{
+    border-color: orange;
+}
+.main-h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+</style>
+<body>
+    <div class="container" >
+    <div class="main-h1">
+        <h2>Unlock The Secrets To Mouthwatering Dishes.</h2>
+    </div>
+    <div class="main-h2">
+        <h3>Recipe Kavala ?</h3>
+    </div>
+    <form action="/recipelist" method="post">
+    <div class="input">
+        <input type="text" class="search-bar" name="namee" placeholder="Search">
+        <button class="find">Find</button>
+    </div></form>
+    <div class="main-h3">
+        <h6>2024|Flavor Awaits You!</h6>
+    </div>
+</div>
+    
+</body>
+</html>

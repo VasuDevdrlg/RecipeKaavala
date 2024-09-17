@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{label}} - Recipe Kavala</title>
+    <link rel="icon" href="static/reshot-icon-hot-food-DUYKGBF2XM.svg" type="image/x-icon">
+</head>
+<style>
+    body{
+  margin-top: 65px;
+  margin-left: 0px;
+  font-family: "Ubuntu";
+}
+
+.navhead
+{
+  height: 65px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+  border-bottom: solid 1.25px rgb(222, 221, 221);
+  
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 8;
+
+}
+.nav-logo img{
+  width: 52px;
+  margin-left: 16px;
+  vertical-align: middle;
+}
+.nav-logo
+{
+  margin-left: 12px;
+  display:inline-block;
+}
+.logo-name
+{
+  font-family: "Playwrite GB S", cursive;
+  font-weight: bolder;
+  font-size: 21px;
+  margin-left:16px;
+  color: orange;
+}
+.nav-links
+{
+  list-style-type: none;
+  padding: 0px;
+  margin: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+.nav-links li{
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14.5px;
+  margin-right: 24px;
+  transition: font-size 0.15s;
+  cursor: pointer;
+}
+.nav-links li:hover
+{
+ text-decoration: underline;
+ text-underline-offset: 200;
+ text-underline-position: below;
+ color: rgb(137, 24, 243);
+ font-size: 15px;
+}
+.navsrch {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+
+  position: relative;
+   border: solid 1.4px orange;
+   border-radius: 8px;
+   width: 220px;
+   margin-left: 555px;
+}
+.nav-search
+{
+  position: relative;
+  margin-left:85px;
+}
+
+.analyze
+{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border: none;
+  color: white;
+  margin-left: 18px;
+  border-radius: 6px;
+  background-color: orange;
+  transition: all 0.25s;
+  cursor: pointer;
+
+}
+.analyze:hover
+{
+  background-color: white;
+  color: black;
+  border: solid 1.4px rgb(224, 220, 220);
+  border-radius: 8px;
+}
+    body{
+    height: 130vh;
+}
+.ingredients{
+    display: inline-block;
+    margin-left: 30px;
+}
+.title{
+    display:block;
+    margin-top: -20px;
+    margin-left: 20px;
+    
+}
+.img{
+    display: inline-block;
+    margin-left: 20px;
+    border-radius: 30px;
+}
+.container2
+{
+    display: flex;
+    align-items: start;
+
+}
+.container{
+    border-radius: 15px;
+   padding-top: 25px;
+   height: auto;
+   width: 1100px;
+   margin-left: 65px;
+   margin-top: 100px;
+   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
+  
+}
+.instructions{
+    margin-left: 20px;
+    margin-top: -10px;
+}
+h1,h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: orange;
+}
+p{
+    margin-top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    line-height: 25px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+.items{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-bottom: 16px;
+    
+}
+</style>
+<body>
+    <nav>
+        <div class="navhead">
+         <div class="nav-logo">
+          <img src="static/reshot-icon-hot-food-DUYKGBF2XM.svg">
+          <span class="logo-name">Recipe కావాలా ?</span>
+         </div class="navli">
+          <div class="nav-search">
+            <form action="/recipelist" method="post">
+              <input type="search" placeholder="వంటకం పేరు" class="navsrch" name="namee" >
+              <input type="submit" class="analyze" value="శోధించు"> 
+              <div style="position: absolute;
+              top: 9.2px;
+              left: 560px;">
+                <img src="static/search.svg" width="20px;">
+              </div>
+            </form>
+                </nav>
+    <div class="container">
+    <div class="title">
+        <h1>{{label}}</h1>
+    </div>
+        <div class="container2">
+    <div class="img">
+        <img src="{{srcc}}">
+    </div>
+    <div class="ingredients">
+        <h2>Ingredients</h2>
+        <ul class="items">
+          {%for i in item%}
+          <li>{{i.quantity}} {{i.unit}} {{i.item}}</li>
+          {%endfor%}
+        </ul>
+      </div>
+    </div>
+    <div class="instructions">
+        <h2>Instructions</h2>
+        <ul class="items">
+        {%for i in matter%}
+        <li>{{i.step}} {{i.instruction}}</li>
+        {%endfor%}
+      </ul>
+    </div>
+</div>
+</body>
+</html>
