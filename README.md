@@ -20,7 +20,7 @@
 ## Screenshots
 
 ### Home Page
-![Home Page](path_to_screenshot1.png)
+![Home Page](https://envs.sh/w6T.jpg)
 
 ### Recipe Search
 ![Recipe Search](path_to_screenshot2.png)
