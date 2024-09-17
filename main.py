@@ -3,7 +3,7 @@ import requests
 from flask import Flask,render_template,request
 import os
 import google.generativeai as genai
-api="AIzaSyBVOpDlIL0s-qWRfRl1QM9LBc9FhmAlmDo"
+api="sryyyy"
 api_key = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=api)
 model = genai.GenerativeModel('gemini-1.5-flash')
@@ -47,7 +47,7 @@ def index():
 def recipelistt():
   if request.method=='POST':
     namee=request.form["namee"]
-    response=requests.get(f"https://api.edamam.com/api/recipes/v2?type=public&q={namee}&app_id=c7976567&app_key=06a4c104e53fcc5e7b57d0f0b217697b")
+    response=requests.get(f"https://api.edamam.com/api/recipes/v2?type=public&q={namee}&app_id=c7976567&app_key=sryyAgain")
     data=response.json()
     info=[]
     for i in data['hits']:
