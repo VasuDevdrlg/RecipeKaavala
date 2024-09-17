@@ -22,11 +22,11 @@
 ### Home Page
 ![Home Page](https://envs.sh/w6T.jpg)
 
-### Recipe Search
+### Recipe List
 ![Recipe Search](https://envs.sh/w6A.jpg)
 
 ### Recipe Results
-![Recipe Results](path_to_screenshot3.png)
+![Recipe Information](https://envs.sh/w6j.jpg)
 
 ## Installation
 
