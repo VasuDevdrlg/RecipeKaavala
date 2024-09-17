@@ -23,7 +23,7 @@
 ![Home Page](https://envs.sh/w6T.jpg)
 
 ### Recipe Search
-![Recipe Search](path_to_screenshot2.png)
+![Recipe Search](https://envs.sh/w6A.jpg)
 
 ### Recipe Results
 ![Recipe Results](path_to_screenshot3.png)
